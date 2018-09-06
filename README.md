@@ -48,7 +48,8 @@ in bitcoin.conf).
 [Electrum bitcoin wallet](https://electrum.org/), and set up your Electrum
 wallet (for example by linking your hardware wallet). To avoid damaging privacy
 by connecting to public Electrum servers, disconnect from the internet first or
-run Electrum with the command line argument `--server localhost:50002:s`.
+run Electrum with the command line argument `--oneserver --server 127.0.0.1:50002:s`.
+This locks Electrum to connect only to your server and disables the GUI button to stop accidental connections.
 
 * Download the [latest release](https://github.com/chris-belcher/electrum-personal-server/releases)
 of Electrum Personal Server or clone the git repository. Enter the directory
@@ -74,11 +75,6 @@ matches what is written in `config.cfg` (port 50002 by default).
 A guide for installing Electrum Personal Server on a Raspberry Pi can be found
 [here](https://github.com/Stadicus/guides/blob/master/raspibolt/raspibolt_64_electrum.md).
 
-Pro Tip: run Electrum wallet with the command line arguments `--oneserver --server localhost:50002:s`.
-This stops Electrum connecting to several other servers to obtain block
-headers; and locks Electrum to connect only to your server, disabling the GUI
-button to stop accidental connections. This helps avoid a user accidentally
-ruining their privacy by connecting to public Electrum servers.
 
 #### Exposure to the Internet
 
